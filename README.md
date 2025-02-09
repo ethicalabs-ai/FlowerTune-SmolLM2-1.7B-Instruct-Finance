@@ -45,6 +45,12 @@ For the **HuggingFaceTB/SmolLM2-1.7B-Instruct** model I adopted the following fi
 - **TFNS**: 75.76 %  
 - **Average**: 67.91 %
 
+### Training Loss Visualization
+
+Below is the training loss plot from the experiment:
+
+![Training Loss](flowertune-eval-finance/benchmarks/train_loss.png)
+
 ### Communication Budget
 
 11005.66 MB
