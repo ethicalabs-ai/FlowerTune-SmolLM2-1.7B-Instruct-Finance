@@ -1,6 +1,6 @@
 # FlowerTune LLM on Finance Dataset
 
-This directory conducts federated instruction tuning with a pretrained [SmolLM2-1.7B-Instruct](HuggingFaceTB/SmolLM2-1.7B-Instruct) model on a [Finance dataset](https://huggingface.co/datasets/FinGPT/fingpt-sentiment-train).
+This directory conducts federated instruction tuning with a pretrained [SmolLM2-1.7B-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct) model on a [Finance dataset](https://huggingface.co/datasets/FinGPT/fingpt-sentiment-train).
 We use [Flower Datasets](https://flower.dev/docs/datasets/) to download, partition and preprocess the dataset.
 Flower's Simulation Engine is used to simulate the LLM fine-tuning process in federated way,
 which allows users to perform the training on a single GPU.
