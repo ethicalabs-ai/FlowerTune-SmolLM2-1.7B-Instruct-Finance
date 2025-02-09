@@ -24,8 +24,8 @@ huggingface-cli login
 ```bash
 python eval.py \
 --base-model-name-path=HuggingFaceTB/SmolLM2-1.7B-Instruct \
---peft-path=/path/to/fine-tuned-peft-model-dir/
---run-name=fl  \
+--peft-path=/path/to/fine-tuned-peft-model-dir/ \
+--run-name=fl \
 --batch-size=1 \
 --quantization=4 \
 --datasets=fpb,fiqa,tfns
