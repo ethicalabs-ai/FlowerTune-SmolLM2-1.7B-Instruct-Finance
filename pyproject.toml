@@ -39,7 +39,7 @@ model.lora.peft-lora-r = 32
 model.lora.peft-lora-alpha = 64
 train.save-every-round = 5
 train.learning-rate-max = 2e-4
-train.learning-rate-min = 5e-6
+train.learning-rate-min = 6e-6
 train.seq-length = 512
 train.training-arguments.output-dir = ""
 train.training-arguments.learning-rate = ""
@@ -58,7 +58,7 @@ train.training-arguments.tf32 = true
 train.training-arguments.bf16 = true
 strategy.fraction-fit = 0.1
 strategy.fraction-evaluate = 0.0
-num-server-rounds = 10
+num-server-rounds = 12
 
 [tool.flwr.app.config.static]
 dataset.name = "FinGPT/fingpt-sentiment-train"
