@@ -38,6 +38,12 @@ For the **HuggingFaceTB/SmolLM2-1.7B-Instruct** model I adopted the following fi
   - Constant learning rate scheduler over steps
 - **Strategy**: `FedAvg`
 
+### Training Loss Visualization
+
+Below is the training loss plot from the experiment:
+
+![Training Loss](flowertune-eval-finance/benchmarks/train_loss.png)
+
 ### Evaluation Results (Accuracy)
 
 - **FiQA**: 56.58 %  
@@ -45,15 +51,57 @@ For the **HuggingFaceTB/SmolLM2-1.7B-Instruct** model I adopted the following fi
 - **TFNS**: 75.76 %  
 - **Average**: 67.91 %
 
-### Training Loss Visualization
-
-Below is the training loss plot from the experiment:
-
-![Training Loss](flowertune-eval-finance/benchmarks/train_loss.png)
+The evaluation was conducted on an RTX A4000 16GB.
 
 ### Communication Budget
 
 11005.66 MB
+
+### Virtual Machine Details
+
+For this experiment, I utilized [CUDO Compute](https://www.cudocompute.com/?via=flowertune-llm) as the GPU compute provider.
+
+| **Component** | **Specification**    |
+|---------------|----------------------|
+| **GPU**       | 1 × RTX A4000 16 GB  |
+| **vCPUs**     | 4                    |
+| **CPU**       | AMD EPYC (Milan)     |
+| **Memory**    | 16 GB                |
+
+### Cost Breakdown
+
+#### Compute Costs
+
+| **Component** | **Details**   | **Cost/hr** |
+|---------------|---------------|-------------|
+| vCPUs         | 4 cores       | $0.0088/hr  |
+| Memory        | 16 GB         | $0.056/hr   |
+| GPU           | 1 × RTX A4000  | $0.25/hr    |
+
+#### Storage Costs
+
+| **Component**    | **Details** | **Cost/hr** |
+|------------------|-------------|-------------|
+| Boot Disk Size   | 70 GB       | $0.0077/hr  |
+
+#### Network Costs
+
+| **Component**         | **Details** | **Cost/hr** |
+|-----------------------|-------------|-------------|
+| Public IPv4 Address   | N/A         | $0.005/hr   |
+
+#### Total Cost
+
+| **Total Cost/hr** |
+|-------------------|
+| **$0.3275/hr**    |
+
+#### Simulation Details
+
+| **Parameter**      | **Value**              |
+|--------------------|------------------------|
+| **Runtime**        | 1924.52 seconds (00:23:18) |
+| **Simulation Cost**| **$0.1273**              |
 
 ## Environments setup
 
