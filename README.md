@@ -5,11 +5,16 @@ We use [Flower Datasets](https://flower.dev/docs/datasets/) to download, partiti
 Flower's Simulation Engine is used to simulate the LLM fine-tuning process in federated way,
 which allows users to perform the training on a single GPU.
 
+## PEFT Adapter
+
+The fine-tuning results have been submitted as a PEFT adapter and can be accessed here:
+
+[https://huggingface.co/mrs83/FlowerTune-SmolLM2-1.7B-Instruct-Finance-PEFT](https://huggingface.co/ethicalabs/FlowerTune-SmolLM2-1.7B-Instruct-Finance-PEFT)
+
 ## Methodology
 
-This baseline performs federated LLM fine-tuning with [DoRA](https://arxiv.org/abs/2402.09353) using the [🤗PEFT](https://huggingface.co/docs/peft/en/index) library.
+This experiment performs federated LLM fine-tuning with [DoRA](https://arxiv.org/abs/2402.09353) using the [🤗PEFT](https://huggingface.co/docs/peft/en/index) library.
 The clients' models are aggregated with `FedAvg` strategy.
-This provides a baseline performance for the leaderboard of Finance challenge.
 
 
 ### SmolLM2-1.7B-Instruct
@@ -48,8 +53,8 @@ Below is the training loss plot from the experiment:
 
 - **FiQA**: 56.58 %  
 - **FPB**: 71.37 %  
-- **TFNS**: 75.76 %  
-- **Average**: 67.91 %
+- **TFNS**: 75.75 %  
+- **Average**: 67.90 %
 
 The evaluation was conducted on an RTX A4000 16GB.
 
